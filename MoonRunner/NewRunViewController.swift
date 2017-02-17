@@ -165,7 +165,7 @@ class NewRunViewController: UIViewController {
 
 // MARK: - MKMapViewDelegate
 extension NewRunViewController: MKMapViewDelegate {
-  func mapView(_ mapView: MKMapView!, rendererFor overlay: MKOverlay!) -> MKOverlayRenderer! {
+  func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
     if !overlay.isKind(of: MKPolyline.self) {
       return nil
     }

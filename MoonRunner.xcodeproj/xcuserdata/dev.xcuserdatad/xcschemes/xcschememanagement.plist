@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>gpsBackground.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>728C29301E568AE200680954</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>870F825C1A24E70F00776E2F</key>
 		<dict>
 			<key>primary</key>

@@ -8,6 +8,7 @@
 
 import CoreLocation
 import UIKit
+import MapKit
 
 class ZJLocationService: NSObject,CLLocationManagerDelegate {
   
