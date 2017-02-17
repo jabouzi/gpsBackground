@@ -166,10 +166,6 @@ class NewRunViewController: UIViewController {
 // MARK: - MKMapViewDelegate
 extension NewRunViewController: MKMapViewDelegate {
   func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-    if !overlay.isKind(of: MKPolyline.self) {
-      return nil
-    }
-
     let polyline = overlay as! MKPolyline
     let renderer = MKPolylineRenderer(polyline: polyline)
     renderer.strokeColor = UIColor.blue
