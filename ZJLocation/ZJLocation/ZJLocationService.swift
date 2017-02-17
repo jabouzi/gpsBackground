@@ -13,7 +13,7 @@ import MapKit
 class ZJLocationService: NSObject,CLLocationManagerDelegate {
   
   static let sharedManager = ZJLocationService()
-
+  lazy var locations = [CLLocation]()
   
   private var backgroundTask = BackgroundTask()
   private var timeInterval: Double = 179
@@ -38,7 +38,7 @@ class ZJLocationService: NSObject,CLLocationManagerDelegate {
     }
   }
   
-  var didUpdateLocation: ((CLLocation) -> Void)?
+  var didUpdateLocation: (([CLLocation]) -> Void)?
   
   class func startLocation() {
     if (CLLocationManager.locationServicesEnabled()) {
@@ -71,7 +71,7 @@ class ZJLocationService: NSObject,CLLocationManagerDelegate {
     print(locations)
     guard let newLocation = locations.last else { return }
     
-    didUpdateLocation?(newLocation)
+    didUpdateLocation?(locations)
     
     if UIApplication.shared.applicationState != .active {
       print("background location : \(newLocation.coordinate.latitude), \(newLocation.coordinate.longitude)")

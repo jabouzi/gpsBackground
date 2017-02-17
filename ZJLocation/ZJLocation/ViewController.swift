@@ -12,7 +12,7 @@ import MapKit
 class ViewController: UIViewController, MKMapViewDelegate {
   
   @IBOutlet weak var label: UILabel!
- @IBOutlet weak var mapView: MKMapView!
+  @IBOutlet weak var mapView: MKMapView!
 //  var zjLocation = ZJLocation()
   
 
@@ -35,13 +35,18 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
     
   func startUpdating() {
-    ZJLocationService.sharedManager.didUpdateLocation = { [weak self] location in
-        self?.label.text = "Location: \(location.coordinate.latitude)  \(location.coordinate.longitude)"
-        let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 500, 500)
-        var coords = [CLLocationCoordinate2D]()
-        coords.append(location.coordinate)
-        self?.mapView.setRegion(region, animated: true)
-        self?.mapView.add(MKPolyline(coordinates: &coords, count: coords.count))
+    ZJLocationService.sharedManager.didUpdateLocation = { [weak self] locations in
+        let latitude = locations.last?.coordinate.latitude
+        let longitude = locations.last?.coordinate.longitude
+        self?.label.text = "Location: \(latitude!)  \(longitude!)"
+        for location in locations {
+            let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 500, 500)
+            var coords = [CLLocationCoordinate2D]()
+            coords.append(location.coordinate)
+            self?.mapView.setRegion(region, animated: true)
+            self?.mapView.add(MKPolyline(coordinates: &coords, count: coords.count))
+            ZJLocationService.sharedManager.locations.append(location)
+        }
     }
   }
 
