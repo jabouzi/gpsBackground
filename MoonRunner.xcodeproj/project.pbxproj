@@ -267,6 +267,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 449ZVE3U99;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					870F825C1A24E70F00776E2F = {
 						CreatedOnToolsVersion = 6.1;
@@ -430,7 +435,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = gpsBackground/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skanderjabouzi.MoonRunner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -453,7 +458,7 @@
 				DEVELOPMENT_TEAM = 449ZVE3U99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = gpsBackground/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skanderjabouzi.MoonRunner;
 				PRODUCT_NAME = "$(TARGET_NAME)";

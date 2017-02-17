@@ -77,7 +77,7 @@ class NewRunViewController: UIViewController {
 
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
-    timer.invalidate()
+//    timer.invalidate()
   }
 
   func eachSecond(_ timer: Timer) {
