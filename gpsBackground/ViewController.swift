@@ -15,6 +15,7 @@ import MapKit
 // MARK: - CLLocationManagerDelegate
 extension ViewController: CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        print(locations)
         for location in locations as! [CLLocation] {
             if location.horizontalAccuracy < 20 {
                 //update distance
@@ -64,6 +65,7 @@ class ViewController: UIViewController {
         let paceUnit = HKUnit.second().unitDivided(by: HKUnit.meter())
         let paceQuantity = HKQuantity(unit: paceUnit, doubleValue: seconds / distance)
         paceLabel.text = "Pace: " + paceQuantity.description
+        print(seconds)
     }
     
     func startLocationUpdates() {

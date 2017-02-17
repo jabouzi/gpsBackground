@@ -13,6 +13,7 @@
 		728C293C1E568AE200680954 /* gpsBackground.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 728C293A1E568AE200680954 /* gpsBackground.xcdatamodeld */; };
 		728C293E1E568AE200680954 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 728C293D1E568AE200680954 /* Assets.xcassets */; };
 		728C29411E568AE200680954 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 728C293F1E568AE200680954 /* LaunchScreen.storyboard */; };
+		72BC57171E56A80E000661EC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8739A7131A9B8092001FE88E /* MapKit.framework */; };
 		7892B4B31AFECC7E00195857 /* MulticolorPolylineSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7892B4B21AFECC7E00195857 /* MulticolorPolylineSegment.swift */; };
 		78CE0D651AFBEA53009BBE75 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE0D641AFBEA53009BBE75 /* Location.swift */; };
 		78CE0D671AFBEA54009BBE75 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE0D661AFBEA54009BBE75 /* Run.swift */; };
@@ -77,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72BC57171E56A80E000661EC /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +273,9 @@
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
 						};
 					};
 					870F825C1A24E70F00776E2F = {
@@ -437,7 +442,7 @@
 				INFOPLIST_FILE = gpsBackground/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.skanderjabouzi.MoonRunner;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skanderjabouzi.MoonRunner2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 3.0;
@@ -460,7 +465,7 @@
 				INFOPLIST_FILE = gpsBackground/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.skanderjabouzi.MoonRunner;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skanderjabouzi.MoonRunner2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
@@ -617,6 +622,7 @@
 				728C29441E568AE200680954 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		870F82581A24E70F00776E2F /* Build configuration list for PBXProject "MoonRunner" */ = {
 			isa = XCConfigurationList;
