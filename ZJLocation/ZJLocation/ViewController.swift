@@ -46,6 +46,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
             self?.mapView.setRegion(region, animated: true)
             self?.mapView.add(MKPolyline(coordinates: &coords, count: coords.count))
             ZJLocationService.sharedManager.locations.append(location)
+            ZJLocationService.sharedManager.sendLocationsToServer(location: location)
         }
     }
   }

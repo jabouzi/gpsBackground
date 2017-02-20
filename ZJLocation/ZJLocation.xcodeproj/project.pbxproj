@@ -19,6 +19,8 @@
 		D73DECB71E574084001645DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D73DECB61E574084001645DD /* Foundation.framework */; };
 		D73DECB91E57408A001645DD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D73DECB81E57408A001645DD /* CoreGraphics.framework */; };
 		D73DECBB1E574093001645DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D73DECBA1E574093001645DD /* UIKit.framework */; };
+		D73DECBF1E5B2A77001645DD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D73DECBE1E5B2A77001645DD /* Alamofire.framework */; };
+		D73DECC11E5B2CEE001645DD /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D73DECBE1E5B2A77001645DD /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +32,20 @@
 			remoteInfo = ZJLocation;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D73DECC21E5B2CEE001645DD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D73DECC11E5B2CEE001645DD /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		32A330821CC7079700D9767A /* ZJLocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZJLocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +64,7 @@
 		D73DECB61E574084001645DD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D73DECB81E57408A001645DD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D73DECBA1E574093001645DD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D73DECBE1E5B2A77001645DD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D73DECBF1E5B2A77001645DD /* Alamofire.framework in Frameworks */,
 				D73DECBB1E574093001645DD /* UIKit.framework in Frameworks */,
 				D73DECB91E57408A001645DD /* CoreGraphics.framework in Frameworks */,
 				D73DECB71E574084001645DD /* Foundation.framework in Frameworks */,
@@ -75,6 +93,7 @@
 		32A330791CC7079700D9767A = {
 			isa = PBXGroup;
 			children = (
+				D73DECBD1E5B2A77001645DD /* Frameworks */,
 				32A330841CC7079700D9767A /* ZJLocation */,
 				32A330991CC7079700D9767A /* ZJLocationTests */,
 				32A330831CC7079700D9767A /* Products */,
@@ -126,6 +145,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D73DECBD1E5B2A77001645DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D73DECBE1E5B2A77001645DD /* Alamofire.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -136,6 +163,7 @@
 				32A3307E1CC7079700D9767A /* Sources */,
 				32A3307F1CC7079700D9767A /* Frameworks */,
 				32A330801CC7079700D9767A /* Resources */,
+				D73DECC21E5B2CEE001645DD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -368,10 +396,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 449ZVE3U99;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = ZJLocation/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.skanderjabouzi.MoonRunner;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skanderjabouzi.depenencyInjection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -382,10 +414,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 449ZVE3U99;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = ZJLocation/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.skanderjabouzi.MoonRunner;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skanderjabouzi.depenencyInjection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

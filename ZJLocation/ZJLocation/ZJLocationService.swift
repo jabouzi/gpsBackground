@@ -9,6 +9,7 @@
 import CoreLocation
 import UIKit
 import MapKit
+import Alamofire
 
 class ZJLocationService: NSObject,CLLocationManagerDelegate {
   
@@ -125,6 +126,21 @@ class ZJLocationService: NSObject,CLLocationManagerDelegate {
       return rootViewController
     }
   }
+    
+    func sendLocationsToServer(location: CLLocation) {
+        Alamofire.request("http://users.skanderjabouzi.com/en/api/geolocation/\(location.coordinate.latitude)/\(location.coordinate.longitude)").responseJSON { response in
+            print("LATITUDE \(location.coordinate.latitude):  & LONGITUDE : \(location.coordinate.longitude)")
+            print("REQUEST: \(response.request)")  // original URL request
+            print("RESPONSE: \(response.response)") // HTTP URL response
+            print("DATA: \(response.data)")     // server data
+            print("RESULT: \(response.result)")   // result of response serialization
+            
+            if let JSON = response.result.value {
+                print("JSON: \(JSON)")
+            }
+        }
+
+    }
   
 //  func applicationStatues() -> UIApplicationState {
 //    return UIApplication.sharedApplication().applicationState
