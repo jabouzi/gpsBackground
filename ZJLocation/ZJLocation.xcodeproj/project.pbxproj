@@ -204,7 +204,7 @@
 				TargetAttributes = {
 					32A330811CC7079700D9767A = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 449ZVE3U99;
+						DevelopmentTeam = 2Q3M5SLHJL;
 						LastSwiftMigration = 0820;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -395,7 +395,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 449ZVE3U99;
+				DEVELOPMENT_TEAM = 2Q3M5SLHJL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -403,7 +403,7 @@
 				INFOPLIST_FILE = ZJLocation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.skanderjabouzi.depenencyInjection;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skanderjabouzi.zlocation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -413,7 +413,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 449ZVE3U99;
+				DEVELOPMENT_TEAM = 2Q3M5SLHJL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -421,7 +421,7 @@
 				INFOPLIST_FILE = ZJLocation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.skanderjabouzi.depenencyInjection;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skanderjabouzi.zlocation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

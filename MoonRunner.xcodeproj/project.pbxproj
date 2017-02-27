@@ -267,7 +267,7 @@
 				TargetAttributes = {
 					728C29301E568AE200680954 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 449ZVE3U99;
+						DevelopmentTeam = 2Q3M5SLHJL;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -436,7 +436,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = 449ZVE3U99;
+				DEVELOPMENT_TEAM = 2Q3M5SLHJL;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = gpsBackground/Info.plist;
@@ -460,7 +460,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 449ZVE3U99;
+				DEVELOPMENT_TEAM = 2Q3M5SLHJL;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = gpsBackground/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
